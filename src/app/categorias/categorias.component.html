@@ -1,0 +1,5 @@
+<h4>Categorias</h4>
+
+<div class="categorias">
+    <button *ngFor="let categoria of categorias;" (click)="filtrar(categoria.getCategoria())">{{categoria.getCategoria()}}</button>
+</div>

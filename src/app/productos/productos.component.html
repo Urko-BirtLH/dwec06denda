@@ -1,0 +1,27 @@
+<p>productos works!</p>
+{{filtrado}}
+<main>
+    
+    <div *ngIf="!filtrado; then categorias else productos"></div>
+</main>
+
+<aside>
+    <app-categorias *ngIf="filtrado"></app-categorias>
+</aside>
+
+<ng-template #categorias>		
+    <app-categorias></app-categorias>				
+</ng-template>
+
+<ng-template #productos>		
+    {{this.categoria_param}}
+    <div class="productos">
+        {{nombres[6]}}
+        {{nombres.length}}
+        <!-- {{productos.length}} -->
+        <div *ngFor="let nombre of nombres">{{nombre}}</div>
+        <!-- <div *ngFor="let producto of productos">{{producto.nombreProducto}}</div> -->
+    </div>			
+</ng-template>	
+
+

@@ -1,0 +1,6 @@
+<nav>
+  <a class='nav_normal' [routerLink]="['/']">Inicio</a>
+  <a class='nav_normal' [routerLink]="['/productos']">Productos</a>
+  <a class='nav_normal' [routerLink]="['/gestion']" *ngIf="login">Gestionar</a>
+  <a class='nav_login'[routerLink]="['/login']" (click)="login = !login"><span *ngIf="!login">Login</span><span *ngIf="login">Logout</span></a>
+</nav>
